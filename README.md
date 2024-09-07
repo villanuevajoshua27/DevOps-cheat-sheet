@@ -1,5 +1,6 @@
 # DevOps cheat sheet
 
+<!-- Docker Commands -->
 <table>
   <thead>
     <tr>
@@ -26,5 +27,24 @@
       </td>
       <td>A tutorial on how to push and pull images to/from Docker Hub, including tips for managing your own Docker Registry.</td>
     </tr>
+  </tbody>
+</table>
+
+<!-- GitHub Actions -->
+<table>
+  <thead>
+    <tr>
+      <th colspan=2>GitHub Contents</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <tr>
+      <td>
+        <a href="https://github.com/koykoy027/DevOps-cheat-sheet/blob/main/GitHub%20-%Actions.md">GitHub Actions</a>
+      </td>
+      <td>Commands in Actions runner</td>
+    </tr>
+    
   </tbody>
 </table>
