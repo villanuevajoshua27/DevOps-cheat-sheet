@@ -1,6 +1,8 @@
 # DevOps cheat sheet
 
-<!-- Docker Commands -->
+<!-- Docker Contents -->
+## Docker Contents
+
 <table>
   <thead>
     <tr>
@@ -31,6 +33,8 @@
 </table>
 
 <!-- GitHub Actions -->
+## GitHub Actions
+
 <table>
   <thead>
     <tr>
@@ -44,6 +48,27 @@
         <a href="https://github.com/koykoy027/DevOps-cheat-sheet/blob/main/GitHub%20-%Actions.md">GitHub Actions</a>
       </td>
       <td>Commands in Actions runner</td>
+    </tr>
+    
+  </tbody>
+</table>
+
+<!-- Others Installation in Ubuntu-->
+## Others Installation in Ubuntu
+
+<table>
+  <thead>
+    <tr>
+      <th colspan=2>Others Installation in Ubuntu</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <tr>
+      <td>
+        <a href="https://github.com/koykoy027/DevOps-cheat-sheet/blob/main/GitHub%20-%Actions.md">CertBot in Apache2</a>
+      </td>
+      <td>Step by step how to install certbot in apache2 to support HTTPS request</td>
     </tr>
     
   </tbody>
