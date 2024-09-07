@@ -19,7 +19,9 @@ GitHub contents
 Ubuntu contents
 | Title | Description |
 | ----- | ----------- |
-| [Ubuntu Commands](Ubuntu%20-%20Commands.md) | Essential Ubuntu commands |
 | [CertBot in Apache2](Ubuntu%20-%20Certbot%20Apache2.md) | Install CertBot in apache2 to support HTTPS request with automation renew |
-| [PHP version](Ubuntu%20-%20PHP%20version.md) | Step by step in how to change existing PHP version and install some packanges |
+| [Ubuntu Commands](Ubuntu%20-%20Commands.md) | Essential Ubuntu commands |
 | [cPanel & WHM Hosting Control Panel for AlmaLinux 9](Ubuntu%20-%20cPanel%20%26%20WHM.md) | How to install cPanel & WHM Hosting control panel for Alma Linux 9 |
+| [Laravel and Apache2](Ubuntu%20-%20Laravel%20and%20Apache2.md) | Deploy Laravel application in Apache2 |
+| [PHP version](Ubuntu%20-%20PHP%20version.md) | Step by step in how to change existing PHP version and install some packanges |
+
