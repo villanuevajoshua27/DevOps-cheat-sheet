@@ -1,4 +1,4 @@
-# How to push and pull Docker registry
+# How to push and pull in Docker Hub
   
 ### Push the image
 1. Ensure you have already created a repository in your Docker Hub.
@@ -22,6 +22,16 @@ docker push javillanueva/repository:nginx-alpine
 ```
 
 ### Run the image on a new instance
-- 
+5. Pull the image
+```
+docker pull <CONTAINER_NAME:TAG>
+# sanple
+docker pull javillanueva/grandshipper-test:nginx-alpine
+```
+
+6. In the terminal, start your freshly pushed app
+```
+docker run -dp 0.0.0.0:80:80 javillanueva/repository:nginx-alpine
+```
 
 > reference [here](https://docs.docker.com/get-started/workshop/04_sharing_app/)
