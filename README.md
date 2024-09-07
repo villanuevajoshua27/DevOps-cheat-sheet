@@ -53,23 +53,43 @@
   </tbody>
 </table>
 
-<!-- Others Installation in Ubuntu-->
-## Others Installation in Ubuntu
+<!-- Other Installation in Ubuntu-->
+## Other Installation in Ubuntu
 
 <table>
   <thead>
     <tr>
-      <th colspan=2>Others Installation in Ubuntu</th>
+      <th colspan=2>Other Installation in Ubuntu</th>
     </tr>
   </thead>
   
   <tbody>
     <tr>
       <td>
-        <a href="https://github.com/koykoy027/DevOps-cheat-sheet/blob/main/GitHub%20-%Actions.md">CertBot in Apache2</a>
+        <a href="https://github.com/koykoy027/DevOps-cheat-sheet/blob/main/Ubuntu%20-%20Commands.md">Ubuntu Commands</a>
       </td>
-      <td>Step by step how to install certbot in apache2 to support HTTPS request</td>
+      <td>Ubuntu Commands</td>
     </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/koykoy027/DevOps-cheat-sheet/blob/main/Ubuntu%20-%20Certbot%20Apache2.md">CertBot in Apache2</a>
+      </td>
+      <td>Step by step how to install CertBot in apache2 to support HTTPS request</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/koykoy027/DevOps-cheat-sheet/blob/main/Ubuntu%20-%20PHP%20version.md">PHP version</a>
+      </td>
+      <td>Step by step in how to change existing PHP version and install some packanges</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/koykoy027/DevOps-cheat-sheet/blob/main/Ubuntu%20-%20cPanel%20%26%20WHM.md">cPanel & WHM Hosting Control Panel for AlmaLinux 9</a>
+      </td>
+      <td>How to install cPanel & WHM Hosting control panel for Alma Linux 9</td>
+    </tr>
+    
     
   </tbody>
 </table>
+
