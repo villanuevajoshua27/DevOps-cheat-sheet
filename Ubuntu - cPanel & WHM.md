@@ -12,4 +12,4 @@ How to install cPanel & WHM Hosting control panel for Alma Linux 9
 7. `sudo passwd root` Set a root password
 8. Access WHM by going to https://IPADDRESS:2087 with the root login and password you just created
 
-[reference here](https://aws.amazon.com/marketplace/pp/prodview-hgvsqazbjp6sc?ref_=beagle&applicationId=AWS-EC2-Console#pdp-usage)
+> reference [here](https://aws.amazon.com/marketplace/pp/prodview-hgvsqazbjp6sc?ref_=beagle&applicationId=AWS-EC2-Console#pdp-usage)
