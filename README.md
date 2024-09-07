@@ -45,7 +45,7 @@
   <tbody>
     <tr>
       <td>
-        <a href="https://github.com/koykoy027/DevOps-cheat-sheet/blob/main/GitHub%20-%Actions.md">GitHub Actions</a>
+        <a href="https://github.com/koykoy027/DevOps-cheat-sheet/blob/main/GitHub%20-%20Actions%20Command.md">GitHub Actions</a>
       </td>
       <td>Commands in Actions runner</td>
     </tr>
