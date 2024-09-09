@@ -14,6 +14,7 @@ GitHub contents
 | Title | Description |
 | ----- | ----------- |
 | [GitHub Actions](GitHub%20-%20Actions%20Command.md) | Commands in Actions runner to run in background |
+| [GitHub Commands](GitHub%20-%20Commands.md) | Essential Git Commands |
 | [GitHub Sub Module](GitHub%20-%20Sub%20Module.md) | GitHub repository with Sub module setup |
 
 ## Other Installation in Ubuntu
