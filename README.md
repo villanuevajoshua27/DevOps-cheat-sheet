@@ -5,6 +5,7 @@ My personal cheat sheet for DevOps
 Docker contents
 | Title | Description |
 | ----- | ----------- |
+| [Docker Swarm](Docker%20%20-%20Swarm.md) | How to install and setup Docker swarm and with sample essential docker swarm commands |
 | [Docker Commands](Docker%20-%20Commands.md) | An essential guide to common Docker commands for managing containers, images, volumes, and networks |
 | [Docker Installation](Docker%20-%20Installation.md) | Step-by-step instructions for setting up an EC2 instance on Ubuntu, complete with Docker and Docker Compose installation |
 | [Docker Registry](Docker%20-%20Registry.md) | A tutorial on how to push and pull images to/from Docker Hub, including tips for managing your own Docker Registry |
