@@ -62,45 +62,53 @@ Congratulations! You have successfully installed Docker Swarm on Ubuntu 22.04. Y
 - Remove Node from Swarm `sudo docker swarm leave --force`
 
 ### Network commands
-- Check all network `sudo docker network ls`
-- Add network using swarm `sudo docker network create --driver overlay <network_name>`
-- Remove existing network `sudo docker network rm <network_name>`
+- List all networks `sudo docker network ls`
+- Add a network using Swarm `sudo docker network create --driver overlay <network_name>`
+- Remove an existing network `sudo docker network rm <network_name>`
 
 ### Stack and Services commands
 
 - Deploy your stack
-```bash
-sudo docker stack deploy -c <yourfile.yml> <stack_name>
+  ```bash
+  sudo docker stack deploy -c <yourfile.yml> <stack_name>
+  
+  # Sample
+  sudo docker stack deploy -c compose.yml prod
+  ```
 
-# Sample
-sudo docker stack deploy -c compose.yml prod
-```
-
-- Remove existing stack deploy
-```bash
-sudo docker stack rm <stack_name>
-
-# Sample
-sudo docker stack rm prod
-```
+- Remove an existing stack deployment
+  ```bash
+  sudo docker stack rm <stack_name>
+  
+  # Sample
+  sudo docker stack rm prod
+  ```
 
 ### Stack Services commands
-- Check all service `sudo docker service ls`
-- Check specific stack services
-```bash
-sudo docker stack services <stack_name>
+- Check all services (for all stacks)
+  ```
+  sudo docker service ls
 
-# Sample
-sudo docker stack services prod
-```
+  # OR
 
-- Restart service
-```bash
-sudo docker service update --force <service_name>
+  sudo docker stack ls
+  ```
+  
+- Check services for a specific stack
+  ```bash
+  sudo docker stack services <stack_name>
+  
+  # Sample
+  sudo docker stack services prod
+  ```
 
-# Sample
-sudo docker service update --force prod_api
-```
+- Restart a specific service in the stack
+  ```bash
+  sudo docker service update --force <service_name>
+  
+  # Sample
+  sudo docker service update --force prod_api
+  ```
 
 
 
@@ -108,8 +116,8 @@ sudo docker service update --force prod_api
 
 ## How to build and run independently
 
-Sample Query
-```bash
-sudo docker build -t danegigi/gs2-api:local ./api
-sudo docker run -d -p 9000:9000 --name gs2-api danegigi/gs2-api:local
-```
+- Sample Query
+  ```bash
+  sudo docker build -t danegigi/gs2-api:local ./api
+  sudo docker run -d -p 9000:9000 --name gs2-api danegigi/gs2-api:local
+  ```
