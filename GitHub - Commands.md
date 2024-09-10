@@ -5,19 +5,19 @@ GitHub is a platform for storing and sharing code. This guide covers basic GitHu
 
 ---
 
-## Git global auth/credentials
+### Git global auth/credentials
 ```bash
 git config --global user.email "villanuevajoshua27@gmail.com"
 git config --global user.name "koykoy027"
 ```
 
-## Git remote auth/credentials
+### Git remote auth/credentials
 ```bash
 git config user.email "villanuevajoshua27@gmail.com"
 git config user.name "koykoy027"
 ```
 
-## How to Login via Personal access token
+### How to Login via Personal access token
 ```bash
 git credential-store --file ~/.git-credentials store <<EOF
 protocol=https
@@ -31,7 +31,7 @@ EOF
 git config --global credential.helper store
 ```
 
-## Verify Authentication
+### Verify Authentication
 
 To check the global Git user name:
 ```bash
@@ -58,7 +58,7 @@ If you want to see information about the currently logged-in user on your Ubuntu
 whoami
 ```
 
-## update git
+### Update git
 
 update default branch, from `master ` to `main`
 ```bash
@@ -74,13 +74,13 @@ git remote set-url origin <new-remote-url>
 git branch --set-upstream-to=origin/<correct-branch-name> main
 ```
 
-## How to ignore all files and folders
+### How to ignore all files and folders
 ```bash
 *
 !*gitignore
 ```
 
-## How to revert commit with SHA
+### How to revert commit with SHA
 ```bash
 git revert -m 1 <SHA>
 ```
