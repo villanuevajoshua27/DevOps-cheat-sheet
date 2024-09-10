@@ -2,59 +2,13 @@
 
 ## Introduction
 
-This repository contains multiple submodules, which are external Git repositories embedded within this project. These submodules allow us to maintain dependencies or shared codebases independently while integrating them seamlessly into the main project.
+This repository contains multiple submodules and external Git repositories embedded within this project. These submodules allow us to independently maintain dependencies or shared codebases while integrating them seamlessly into the main project.
 
-Each submodule has its own version control, and changes within a submodule must be handled separately.
-
----
-
-## Getting Started
-
-### Prerequisites
-Make sure you have the following installed:
-- [Git](https://git-scm.com/) version 2.11 or higher
-- [GitHub CLI](https://cli.github.com/) (optional, but recommended)
-
-### Cloning the Repository
-
-When cloning a repository with submodules, you must use the `--recurse-submodules` flag to ensure all submodules are initialized and cloned automatically.
-
-```bash
-git clone --recurse-submodules <repository_url>
-```
-
-Alternatively, if you've already cloned the repository without submodules, you can initialize them afterward by running:
-
-```bash
-git submodule update --init --recursive
-```
-
-### Initializing Submodules
-
-If you cloned the repository without initializing submodules, run the following commands to get them set up:
-
-```bash
-git submodule init
-git submodule update
-```
-
-This will initialize and fetch all submodules as defined in the `.gitmodules` file.
+Each submodule has its version control, and changes within a submodule must be handled separately.
 
 ---
 
-## Working with Submodules
-
-### Updating Submodules
-
-To ensure your submodules are up-to-date, use the following command:
-
-```bash
-git submodule update --remote --merge
-```
-
-This will update the submodules to the latest commit on the specified branch.
-
-### Adding New Submodules
+## Adding New Submodules
 
 To add a new submodule to the repository, follow these steps:
 
@@ -113,7 +67,7 @@ To remove a submodule, follow these steps:
 
 ## Pushing Changes
 
-If you make changes to a submodule, you need to commit those changes within the submodule and push them to the submodule's repository.
+If you make changes to a submodule, you must commit those changes within the submodule and push them to its repository.
 
 1. Navigate to the submodule's directory:
 
@@ -142,5 +96,45 @@ If you make changes to a submodule, you need to commit those changes within the 
    git commit -m "Updated submodule pointer"
    git push origin main
    ```
+   
+## Cloning the Repository
+
+When cloning a repository with submodules, you must use the `--recurse-submodules` flag to ensure all submodules are initialized and cloned automatically.
+
+```bash
+git clone --recurse-submodules <repository_url>
+```
+
+Alternatively, if you've already cloned the repository without submodules, you can initialize them afterward by running:
+
+```bash
+git submodule update --init --recursive
+```
+
+### Initializing Submodules
+
+If you cloned the repository without initializing submodules, run the following commands to get them set up:
+
+```bash
+git submodule init
+git submodule update
+```
+
+This will initialize and fetch all submodules as defined in the `.gitmodules` file.
+
+---
+
+## Working with Submodules
+
+### Updating Submodules
+
+To ensure your submodules are up-to-date, use the following command:
+
+```bash
+git submodule update --remote --merge
+```
+
+This will update the submodules to the latest commit on the specified branch.
+
 
 ---
