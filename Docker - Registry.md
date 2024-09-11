@@ -8,7 +8,7 @@
 docker tag <image>:<tag> <USERNAME>/<REPOSITORY_NAME>:<NEW-IMAGE-TAG>
 
 # Sample
-docker tag nginx:alpine <javillanueva/repository:nginx-alpine
+docker tag nginx:alpine javillanueva/repository:nginx-alpine
 ```
 
 4. Push the images to Docker Hub
@@ -25,7 +25,7 @@ docker push javillanueva/repository:nginx-alpine
 docker pull <CONTAINER_NAME:TAG>
 
 # Sample
-docker pull javillanueva/grandshipper-test:nginx-alpine
+docker pull javillanueva/repository:nginx-alpine
 ```
 
 6. In the terminal, start your freshly pushed app
