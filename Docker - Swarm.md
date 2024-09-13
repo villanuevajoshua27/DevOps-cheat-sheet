@@ -54,6 +54,11 @@ Congratulations! You have successfully installed Docker Swarm on Ubuntu 22.04. Y
 
 ## Essential Docker swarm commands
 
+- To retrieve the token from the manager. The token will be displayed in the output
+```bash
+docker swarm join-token worker
+```
+
 ### Status commands
 - Check docker swarm status `sudo docker info`
 
