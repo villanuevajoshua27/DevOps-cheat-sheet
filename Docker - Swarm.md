@@ -60,62 +60,60 @@ docker swarm join-token worker
 ```
 
 ### Status commands
-- Check docker swarm status `sudo docker info`
+- Check docker swarm status `docker info`
 
 ### Nodes commands
-- Check Swarm Nodes `sudo docker node ls`
-- Remove Node from Swarm `sudo docker swarm leave --force`
+- Check Swarm Nodes `docker node ls`
+- Remove Node from Swarm `docker swarm leave --force`
 
 ### Network commands
-- List all networks `sudo docker network ls`
-- Add a network using Swarm `sudo docker network create --driver overlay <network_name>`
-- Remove an existing network `sudo docker network rm <network_name>`
+- List all networks `docker network ls`
+- Add a network using Swarm `docker network create --driver overlay <network_name>`
+- Remove an existing network `docker network rm <network_name>`
 
 ### Stack and Services commands
 
 - Deploy your stack
   ```bash
-  sudo docker stack deploy -c <yourfile.yml> <stack_name>
+  docker stack deploy -c <yourfile.yml> <stack_name>
   
   # Sample
-  sudo docker stack deploy -c compose.yml prod
+  docker stack deploy -c compose.yml prod
   ```
 
 - Remove an existing stack deployment
   ```bash
-  sudo docker stack rm <stack_name>
+  docker stack rm <stack_name>
   
   # Sample
-  sudo docker stack rm prod
+  docker stack rm prod
   ```
 
 ### Stack Services commands
 - Check all services (for all stacks)
   ```
-  sudo docker service ls
+  docker service ls
 
   # OR
 
-  sudo docker stack ls
+  docker stack ls
   ```
   
 - Check services for a specific stack
   ```bash
-  sudo docker stack services <stack_name>
+  docker stack services <stack_name>
   
   # Sample
-  sudo docker stack services prod
+  docker stack services prod
   ```
 
 - Restart a specific service in the stack
   ```bash
-  sudo docker service update --force <service_name>
+  docker service update --force <service_name>
   
   # Sample
-  sudo docker service update --force prod_api
+  docker service update --force prod_api
   ```
-
-
 
 ---
 
@@ -123,6 +121,6 @@ docker swarm join-token worker
 
 - Sample Query
   ```bash
-  sudo docker build -t danegigi/gs2-api:local ./api
-  sudo docker run -d -p 9000:9000 --name gs2-api danegigi/gs2-api:local
+  docker build -t danegigi/gs2-api:local ./api
+  docker run -d -p 9000:9000 --name gs2-api danegigi/gs2-api:local
   ```
