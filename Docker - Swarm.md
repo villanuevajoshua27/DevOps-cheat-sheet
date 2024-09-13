@@ -55,9 +55,10 @@ Congratulations! You have successfully installed Docker Swarm on Ubuntu 22.04. Y
 ## Essential Docker swarm commands
 
 - To retrieve the token from the manager. The token will be displayed in the output
-```bash
-docker swarm join-token worker
-```
+
+  ```bash
+  docker swarm join-token worker
+  ```
 
 ### Status commands
 - Check docker swarm status `docker info`
@@ -74,6 +75,7 @@ docker swarm join-token worker
 ### Stack and Services commands
 
 - Deploy your stack
+
   ```bash
   docker stack deploy -c <yourfile.yml> <stack_name>
   
@@ -82,6 +84,7 @@ docker swarm join-token worker
   ```
 
 - Remove an existing stack deployment
+
   ```bash
   docker stack rm <stack_name>
   
@@ -91,6 +94,7 @@ docker swarm join-token worker
 
 ### Stack Services commands
 - Check all services (for all stacks)
+
   ```
   docker service ls
 
@@ -100,6 +104,7 @@ docker swarm join-token worker
   ```
   
 - Check services for a specific stack
+
   ```bash
   docker stack services <stack_name>
   
@@ -108,6 +113,7 @@ docker swarm join-token worker
   ```
 
 - Restart a specific service in the stack
+
   ```bash
   docker service update --force <service_name>
   
@@ -120,6 +126,7 @@ docker swarm join-token worker
 ## How to build and run independently
 
 - Sample Query
+
   ```bash
   docker build -t danegigi/gs2-api:local ./api
   docker run -d -p 9000:9000 --name gs2-api danegigi/gs2-api:local
