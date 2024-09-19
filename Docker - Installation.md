@@ -1,6 +1,7 @@
 # Steps to Create an EC2 Instance with Docker and docker-compose Installed on Ubuntu
 
-- Upload or paste this syntax in `user data` in advance settings.
+## Direct install
+- You can also use this in cloud-init or user data in AWS EC2
 ```
 
 #!/bin/bash
@@ -35,4 +36,47 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo docker --version
 sudo docker-compose --version
 
+```
+
+## Background installation
+
+```
+#!/bin/bash
+
+# Run in the background
+(
+# Update package lists and upgrade installed packages
+sudo apt-get update -y
+sudo apt-get upgrade -y
+
+# Install necessary prerequisites
+sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
+
+# Add Docker's official GPG key
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+# Set up the stable repository for Docker
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+# Update package lists again
+sudo apt-get update -y
+
+# Install Docker
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+
+# Start and enable Docker
+sudo systemctl start docker
+sudo systemctl enable docker
+
+# Install Docker Compose
+sudo curl -L "https://github.com/docker/compose/releases/download/$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep -oP '(?<=\"tag_name\": \")[^\"]*')/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
+# You can add join swarm here if you need
+
+# Verify installations and log output
+sudo docker --version
+sudo docker-compose --version
+
+) > /var/log/user-data-install.log 2>&1 &  # End the background process and log output
 ```
