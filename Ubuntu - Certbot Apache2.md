@@ -7,19 +7,25 @@
 sudo apt install certbot python3-certbot-apache
 ```
 
-- Make sure your configuration are all correct and have A records that target your public ip address
+- Make sure your configurations are all correct and have A records that target your public IP address
 
 - Install certbot apache
 ```
 sudo certbot --apache
+
+OR
+
+sudo certbot --apache -d <your_domain> -d <your_sub_domain>
 ```
 
-- Once installing is done, Enable the SSL Module
+
+
+- Once installation is done, Enable the SSL Module
 ```
 sudo a2enmod ssl
 ```
 
-- Setup your updated configuration that will make your http request redirect in https. Make sure you setup port 443 for https
+- Set up your updated configuration to redirect your HTTP request to HTTPS.
 ```
 <VirtualHost *:80>
     ServerAdmin webmaster@localhost
@@ -68,7 +74,7 @@ certbot renew --force-renewal
 ```
 
 ### Set Up Automatic Renewal
-Certbot installs a cron job or a systemd timer that runs twice a day to automatically renew any certificate that is within 90 days of expiration. You can check the cron job or systemd timer to ensure it is set up correctly.
+Certbot installs a cron job or a systemd timer that runs twice a day to renew any certificate within 90 days of expiration automatically. You can check the cron job or systemd timer to ensure it is set up correctly.
 
 - To check the cron job, you can view the cron configuration file
 ```
