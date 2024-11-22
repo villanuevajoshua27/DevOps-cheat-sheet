@@ -136,5 +136,11 @@ git submodule update --remote --merge
 
 This will update the submodules to the latest commit on the specified branch.
 
+---
+
+## Checkout using foreach
+```
+git submodule foreach 'git checkout <branch_name>'
+```
 
 ---
