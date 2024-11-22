@@ -17,6 +17,11 @@ git config user.email "villanuevajoshua27@gmail.com"
 git config user.name "koykoy027"
 ```
 
+### Generate SSH
+```
+ssh-keygen -t rsa -b 4096 -C "villanuevajoshua27@gmail.com"
+```
+
 ### How to Login via Personal access token
 ```bash
 git credential-store --file ~/.git-credentials store <<EOF
