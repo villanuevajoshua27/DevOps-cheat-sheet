@@ -1,4 +1,4 @@
-# Steps to Create an EC2 Instance with Docker and docker-compose Installed on Ubuntu
+# Install Docker and Docker compose
 
 ## Direct install
 - You can also use this in cloud-init or user data in AWS EC2
@@ -39,6 +39,7 @@ sudo docker-compose --version
 ```
 
 ## Background installation
+- You can also use this in cloud-init or user data in AWS EC2
 
 ```
 #!/bin/bash
