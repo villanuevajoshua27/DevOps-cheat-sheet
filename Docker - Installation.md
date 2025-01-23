@@ -40,9 +40,19 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip
 unzip awscliv2.zip
 sudo ./aws/install
 
+# Install ohmyzsh
+sudo apt install zsh -y
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -y
+
+# Add permission to ubuntu user
+sudo usermod -aG sudo ubuntu | sudo usermod -aG docker ubuntu
+
 # Verify installations and log output
 sudo docker --version
 sudo docker-compose --version
+zsh --version
+groups ubuntu
+whoami
 
 ```
 
@@ -62,10 +72,10 @@ sudo apt-get upgrade -y
 sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
 
 # Add Docker's official GPG key
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
 # Set up the stable repository for Docker
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 # Update package lists again
 sudo apt-get update -y
@@ -89,9 +99,19 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip
 unzip awscliv2.zip
 sudo ./aws/install
 
+# Install ohmyzsh
+sudo apt install zsh -y
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -y
+
+# Add permission to ubuntu user
+sudo usermod -aG sudo ubuntu | sudo usermod -aG docker ubuntu
+
 # Verify installations and log output
 sudo docker --version
 sudo docker-compose --version
+zsh --version
+groups ubuntu
+whoami
 
 ) > /var/log/user-data-install.log 2>&1 &  # End the background process and log output
 ```
