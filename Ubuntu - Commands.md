@@ -1,5 +1,8 @@
 # Ubuntu Commands
 
+## SSH Commands
+- `ssh -T git@github.com`: Test handshake
+
 ## Navigation and File Management
 - `cp source destination`: Copy files or directories.
 - `mv source destination`: Move or rename files or directories.
