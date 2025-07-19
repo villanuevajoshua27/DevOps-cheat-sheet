@@ -1,8 +1,9 @@
-# Install Docker and Docker compose
+# How to install Docker and Docker-Compose server
 
-## Direct install
-- You can also use this in cloud-init or user data in AWS EC2
-```
+### Direct installation
+Copy and paste this command for the full installation of Docker and Docker Compose Server.
+
+```bash
 
 #!/bin/bash
 # Update package lists and upgrade installed packages
@@ -32,19 +33,19 @@ sudo systemctl enable docker
 sudo curl -L "https://github.com/docker/compose/releases/download/$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep -oP '(?<=\"tag_name\": \")[^\"]*')/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
-# Install zip and unzip
+# Install zip and unzip (optional)
 sudo apt install zip | sudo apt install unzip
 
-# Install awscli
+# Install awscli (optional)
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
 
-# Install ohmyzsh
+# Install ohmyzsh (optional)
 sudo apt install zsh -y
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -y
 
-# Add permission to ubuntu user
+# Add permission to ubuntu user (optional)
 sudo usermod -aG sudo ubuntu | sudo usermod -aG docker ubuntu
 
 # Verify installations and log output
@@ -56,10 +57,10 @@ whoami
 
 ```
 
-## Background installation
-- You can also use this in cloud-init or user data in AWS EC2
+### Background installation
+Use this command if you want to run the installation in the background, or paste this in cloud-init or user-data.
 
-```
+```bash
 #!/bin/bash
 
 # Run in the background
@@ -91,19 +92,19 @@ sudo systemctl enable docker
 sudo curl -L "https://github.com/docker/compose/releases/download/$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep -oP '(?<=\"tag_name\": \")[^\"]*')/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
-# Install zip and unzip
+# Install zip and unzip (optional)
 sudo apt install zip | sudo apt install unzip
 
-# Install awscli
+# Install awscli (optional)
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
 
-# Install ohmyzsh
+# Install ohmyzsh (optional)
 sudo apt install zsh -y
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -y
 
-# Add permission to ubuntu user
+# Add permission to ubuntu user (optional)
 sudo usermod -aG sudo ubuntu | sudo usermod -aG docker ubuntu
 
 # Verify installations and log output
