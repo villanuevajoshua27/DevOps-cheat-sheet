@@ -63,6 +63,18 @@ If you want to see information about the currently logged-in user on your Ubuntu
 whoami
 ```
 
+## Useful commands
+
+- **Fetch and Prune**: This is the most common method. It fetches all the latest changes from the remote and simultaneously prunes the deleted branches
+```bash
+git fetch --prune
+```
+
+- **Prune Only**: If you don't need to fetch new changes and just want to clean up, you can use
+```bash
+git remote prune
+```
+
 ### Update git
 
 update default branch, from `master ` to `main`
